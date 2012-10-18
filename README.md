@@ -22,3 +22,11 @@ Ratify requires either jQuery or Zepto.
 ## Contributing to Ratify
 
 TODO: Fill this out as build/testing process is completed.
+
+## Dependencies
+
+TODO: Determine JS dependencies that will be needed for the pluggin to run. 
+
+IE: 
+
++ jQuery
