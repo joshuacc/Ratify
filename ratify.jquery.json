@@ -1,0 +1,30 @@
+{
+    "name": "ratify",
+    "title": "Ratify",
+    "description": "A simple but powerful library for front-end validation.",
+    "version": "0.1.0",
+    "codename": "Harvey Dent",
+    "smallCode": "harvey-dent",
+    "homepage": "https://github.com/naviance/Ratify",
+    "author": {
+        "name": "Hobsons",
+        "url": "http://www.hobsons.com/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/naviance/Ratify.git"
+    },
+    "bugs": {
+        "url": "https://github.com/naviance/Ratify/issues"
+    },
+    "licenses": [
+        {
+            "type": "All rights reserved",
+            "url": "https://github.com/naviance/Ratify/blob/master/LICENSE-MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": "*"
+    },
+  " keywords": []
+}
