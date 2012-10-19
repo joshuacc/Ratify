@@ -1,6 +1,8 @@
 /*global module:false*/
 module.exports = function (grunt) {
 
+grunt.loadNpmTasks('grunt-coffee');
+
     // Project configuration.
     grunt.initConfig({
         pkg: '<json:ratify.jquery.json>',
@@ -10,6 +12,20 @@ module.exports = function (grunt) {
                 ' <%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' +
                 ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
                 ' * <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
+        },
+        coffee: {
+            spec: {
+                src: ['spec/*.coffee'],
+                options: {
+                    bare: false
+                }
+            },
+            source: {
+                src: ['src/*.coffee'],
+                options: {
+                    bare: false
+                }
+            }
         },
         concat: {
             dist: {
@@ -32,12 +48,12 @@ module.exports = function (grunt) {
                 'src/ratify-core.js',
                 'src/ratifiers.js'
             ],
-            tasks: 'concat min'
+            tasks: 'coffee concat min'
         },
         uglify: {}
     });
 
     // Default task.
-    grunt.registerTask('default', 'concat min');
+    grunt.registerTask('default', 'coffee concat min');
 
 };

@@ -1,1 +1,5 @@
-console.log("ratifiers");
+(function() {
+
+  console.log("ratifiers");
+
+}).call(this);

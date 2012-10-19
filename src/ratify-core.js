@@ -1,2 +1,5 @@
-// Core
-console.log("core");
+(function() {
+
+  console.log("Ratify core");
+
+}).call(this);

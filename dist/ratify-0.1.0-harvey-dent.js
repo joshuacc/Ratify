@@ -3,6 +3,14 @@
  * Copyright (c) 2012 Hobsons
  * All rights reserved */
 
-// Core
-console.log("core");
-console.log("ratifiers");
+(function() {
+
+  console.log("Ratify core");
+
+}).call(this);
+
+(function() {
+
+  console.log("ratifiers");
+
+}).call(this);

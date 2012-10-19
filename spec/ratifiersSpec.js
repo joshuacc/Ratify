@@ -1,5 +1,9 @@
-describe("Ratifiers", function () {
-    it("Runs a spec", function () {
-        expect(true).toBe(true);
+(function() {
+
+  describe("Ratifiers", function() {
+    return it("runs a spec", function() {
+      return expect(true).toBe(true);
     });
-});
+  });
+
+}).call(this);
