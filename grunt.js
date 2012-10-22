@@ -1,7 +1,8 @@
 /*global module:false*/
 module.exports = function (grunt) {
 
-grunt.loadNpmTasks('grunt-coffee');
+    grunt.loadNpmTasks('grunt-coffee');
+    grunt.loadNpmTasks('grunt-jasmine-runner');
 
     // Project configuration.
     grunt.initConfig({
@@ -43,17 +44,35 @@ grunt.loadNpmTasks('grunt-coffee');
                 dest: 'dist/<%= pkg.name %>-<%= pkg.version %>-<%= pkg.smallCode %>.min.js'
             }
         },
+        jasmine : {
+            src : [
+                'src/ratify-core.js',
+                'src/ratifiers.js'
+            ],
+            specs : [
+                'spec/coreSpec.js',
+                'spec/ratifiersSpec.js'
+            ],
+            helpers : 'specs/helpers/*.js',
+            timeout : 10000,
+            phantomjs : {
+                'ignore-ssl-errors' : true
+            }
+        },
+        'jasmine-server' : {
+            browser : false
+        },
         watch: {
             files: [
                 'src/ratify-core.js',
                 'src/ratifiers.js'
             ],
-            tasks: 'coffee concat min'
+            tasks: 'coffee concat min jasmine'
         },
         uglify: {}
     });
 
     // Default task.
-    grunt.registerTask('default', 'coffee concat min');
+    grunt.registerTask('default', 'coffee concat min jasmine');
 
 };
