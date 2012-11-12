@@ -46,6 +46,7 @@ module.exports = function (grunt) {
         },
         jasmine : {
             src : [
+                'node_modules/zepto/zepto.min.js',
                 'src/ratify-core.js',
                 'src/ratifiers.js'
             ],
@@ -64,8 +65,10 @@ module.exports = function (grunt) {
         },
         watch: {
             files: [
-                'src/ratify-core.js',
-                'src/ratifiers.js'
+                'src/ratify-core.coffee',
+                'src/ratifiers.coffee',
+                'spec/coreSpec.coffee',
+                'spec/ratifiersSpec.coffee'
             ],
             tasks: 'coffee concat min jasmine'
         },

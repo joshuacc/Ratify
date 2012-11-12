@@ -1,2 +1,3 @@
-# Ratify core
-console.log "Ratify core"
+$.fn.ratify = ->
+  return @.each ->
+    return @
