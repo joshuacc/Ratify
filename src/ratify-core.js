@@ -6,4 +6,6 @@
     });
   };
 
+  $.fn.ratify.ratifiers = {};
+
 }).call(this);

@@ -1,3 +1,0 @@
-# Ratifiers
-
-console.log "ratifiers"

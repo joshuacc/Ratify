@@ -16,13 +16,19 @@ module.exports = function (grunt) {
         },
         coffee: {
             spec: {
-                src: ['spec/*.coffee'],
+                src: [
+                    'spec/*.coffee',
+                    'spec/ratifiers/*.coffee'
+                ],
                 options: {
                     bare: false
                 }
             },
             source: {
-                src: ['src/*.coffee'],
+                src: [
+                    'src/*.coffee',
+                    'src/ratifiers/*.coffee'
+                ],
                 options: {
                     bare: false
                 }
@@ -33,7 +39,7 @@ module.exports = function (grunt) {
                 src: [
                     '<banner:meta.banner>',
                     'src/ratify-core.js',
-                    'src/ratifiers.js'
+                    'src/ratifiers/*.js'
                 ],
                 dest: 'dist/<%= pkg.name %>-<%= pkg.version %>-<%= pkg.smallCode %>.js'
             }
@@ -48,11 +54,11 @@ module.exports = function (grunt) {
             src : [
                 'node_modules/zepto/zepto.min.js',
                 'src/ratify-core.js',
-                'src/ratifiers.js'
+                'src/ratifiers/*.js'
             ],
             specs : [
                 'spec/coreSpec.js',
-                'spec/ratifiersSpec.js'
+                'spec/ratifiers/*.js'
             ],
             helpers : 'specs/helpers/*.js',
             timeout : 10000,
@@ -66,9 +72,9 @@ module.exports = function (grunt) {
         watch: {
             files: [
                 'src/ratify-core.coffee',
-                'src/ratifiers.coffee',
+                'src/ratifiers/*.coffee',
                 'spec/coreSpec.coffee',
-                'spec/ratifiersSpec.coffee'
+                'spec/ratifiers/*.coffee'
             ],
             tasks: 'coffee concat min jasmine'
         },
