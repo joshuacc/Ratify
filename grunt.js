@@ -52,7 +52,7 @@ module.exports = function (grunt) {
         },
         jasmine : {
             src : [
-                'node_modules/zepto/zepto.min.js',
+                'node_modules/jquery-browser/lib/jquery.js',
                 'src/ratify-core.js',
                 'src/ratifiers/*.js'
             ],
